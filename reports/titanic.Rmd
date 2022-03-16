@@ -1,0 +1,4 @@
+---
+title: Titanic report
+output: pdf_document
+---
