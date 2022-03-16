@@ -8,3 +8,17 @@ Here is a report about the Titanic
 ```{r setup}
 library(tidyverse)
 ```
+
+## Data visualization
+
+Compare fare and passenger age.
+
+```{r load data}
+titanic_data <- read.csv("../data/titanic.csv")
+titanic_data
+```
+
+``` {r scatter-plot}
+ggplot(titanic_data, aes(x = age, y = fare)) +
+    geom_point()
+```
