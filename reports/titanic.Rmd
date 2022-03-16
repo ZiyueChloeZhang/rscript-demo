@@ -2,6 +2,7 @@
 title: Titanic report
 output: pdf_document
 ---
+## Introduction
 
 Here is a report about the Titanic
 
@@ -12,13 +13,17 @@ knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE)
 ```
 
-## Data visualization
+## Data
 
-Compare fare and passenger age.
+Sample of data for analysis shown in Table 1.
 
 ```{r load data}
 titanic_data <- read.csv("../data/titanic.csv")
 ```
+
+## Results
+
+Compare fare and passenger age in Figure 1.
 
 ``` {r scatter-plot}
 ggplot(titanic_data, aes(x = age, y = fare)) +
