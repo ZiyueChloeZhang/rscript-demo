@@ -5,8 +5,11 @@ output: pdf_document
 
 Here is a report about the Titanic
 
-```{r setup}
+```{r setup, include = FALSE}
 library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
 ```
 
 ## Data visualization
@@ -15,7 +18,6 @@ Compare fare and passenger age.
 
 ```{r load data}
 titanic_data <- read.csv("../data/titanic.csv")
-titanic_data
 ```
 
 ``` {r scatter-plot}
