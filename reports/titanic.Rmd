@@ -2,3 +2,9 @@
 title: Titanic report
 output: pdf_document
 ---
+
+Here is a report about the Titanic
+
+```{r setup}
+library(tidyverse)
+```
