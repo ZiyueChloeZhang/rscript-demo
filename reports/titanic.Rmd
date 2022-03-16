@@ -20,7 +20,11 @@ knitr::opts_chunk$set(echo = FALSE,
 Sample of data for analysis shown in Table 1.
 
 ```{r load data}
-titanic_data <- read.csv("../data/titanic.csv")
+titanic_data <- read.csv("../data/titanic.csv") |> 
+    select(fare, age) |> 
+    slice(1:10)
+knitr::kable(titanic_data,
+             caption = "Fare and age valus for the first 10 observations in the Titanic dataset")
 ```
 
 ## Results
