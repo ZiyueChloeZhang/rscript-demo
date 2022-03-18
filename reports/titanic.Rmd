@@ -29,7 +29,13 @@ knitr::kable(titanic_data,
 
 ## Results
 
-Compare fare and passenger age in Figure 1.
+The titanic sank (Figure \@ref(fig:titanic-sank)).
+
+```{r titanic-sank, fig.cap="The Titanic sank (https://www.history.com/news/titanic-final-hours-passengers-lifeboats)"}
+knitr::include_graphics("../results/titanic_sank.jpg")
+```
+
+Compare fare and passenger age in Figure \@ref(fig:display-scatter-plot).
 
 ``` {r create-scatter-plot, fig.height = 3, fig.width = 4}
 scatter_fare_age <- ggplot(titanic_data, aes(x = age, y = fare)) +
@@ -38,6 +44,6 @@ scatter_fare_age <- ggplot(titanic_data, aes(x = age, y = fare)) +
 ggsave("../results/scatter_fare_age.png")
 ```
 
-``` {r display-scatter-plot, out.width = "50%"}
+``` {r display-scatter-plot, out.width = "50%", fig.cap = "Age versus Fare"}
 knitr::include_graphics("../results/scatter_fare_age.png")
 ```
