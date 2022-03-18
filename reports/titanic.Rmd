@@ -3,10 +3,11 @@ title: Titanic report
 output: 
     bookdown::pdf_document2:
         toc: true
+bibliography: references.bib
 ---
 ## Introduction
 
-Here is a report about the Titanic
+Here is a report about the Titanic. The titanic sank in YEAR[@beesley1912loss].
 
 ```{r setup, include = FALSE}
 library(tidyverse)
@@ -48,3 +49,9 @@ The titanic sank (Figure \@ref(fig:titanic-sank)).
 ```{r titanic-sank, fig.cap="The Titanic sank (https://www.history.com/news/titanic-final-hours-passengers-lifeboats)", out.width="60%"}
 knitr::include_graphics("../results/titanic_sank.jpg")
 ```
+
+## Methods
+
+This analysis used the R programming language [@rmanual] and the tidyverse R packge [@tidyverse].
+
+## References
