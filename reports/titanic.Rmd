@@ -31,8 +31,13 @@ knitr::kable(titanic_data,
 
 Compare fare and passenger age in Figure 1.
 
-``` {r scatter-plot, fig.height = 3, fig.width = 4}
-ggplot(titanic_data, aes(x = age, y = fare)) +
+``` {r create-scatter-plot, fig.height = 3, fig.width = 4}
+scatter_fare_age <- ggplot(titanic_data, aes(x = age, y = fare)) +
     geom_point() +
     labs(x = "Age (years)", y = "Fare (Pounds)")
+ggsave("../results/scatter_fare_age.png")
+```
+
+``` {r display-scatter-plot, out.width = "50%"}
+knitr::include_graphics("../results/scatter_fare_age.png")
 ```
