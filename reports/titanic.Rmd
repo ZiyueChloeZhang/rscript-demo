@@ -1,7 +1,7 @@
 ---
 title: Titanic report
 output: 
-    pdf_document:
+    bookdown::pdf_document2:
         toc: true
 ---
 ## Introduction
@@ -17,9 +17,9 @@ knitr::opts_chunk$set(echo = FALSE,
 
 ## Data
 
-Sample of data for analysis shown in Table 1.
+Sample of data for analysis shown in Table \@ref(tab:load-data).
 
-```{r load data}
+```{r load-data}
 titanic_data <- read.csv("../data/titanic.csv") |> 
     select(fare, age) |> 
     slice(1:10)
