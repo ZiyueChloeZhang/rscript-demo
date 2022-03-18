@@ -30,6 +30,7 @@ knitr::kable(titanic_data,
 ## Results
 
 Compare fare and passenger age in Figure \@ref(fig:display-scatter-plot).
+The age of the first passenger is `r titanic_data$age[1]`.
 
 ``` {r create-scatter-plot, fig.height = 3, fig.width = 4}
 scatter_fare_age <- ggplot(titanic_data, aes(x = age, y = fare)) +
